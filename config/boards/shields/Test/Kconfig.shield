@@ -1,5 +1,5 @@
-config SHIELD_KeyballBLE_R
-    def_bool $(shields_list_contains,KeyballBLE_R)
+config SHIELD_Cygnus_R
+    def_bool $(shields_list_contains,Cygnus_R)
 
-config SHIELD_KeyballBLE_L
-    def_bool $(shields_list_contains,KeyballBLE_L)
+config SHIELD_Cygnus_L
+    def_bool $(shields_list_contains,Cygnus_L)
