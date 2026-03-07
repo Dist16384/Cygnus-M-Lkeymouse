@@ -1,7 +1,7 @@
-if SHIELD_KeyballBLE_R
+if SHIELD_Cygnus_R
 
 config ZMK_KEYBOARD_NAME
-    default "KeyballBLE-M_R"
+    default "Cygnus-M_R"
 
 config ZMK_SPLIT
     default y
@@ -11,10 +11,10 @@ config ZMK_SPLIT_ROLE_CENTRAL
 
 endif
 
-if SHIELD_KeyballBLE_L
+if SHIELD_Cygnus_L
 
 config ZMK_KEYBOARD_NAME
-    default "KeyballBLE-M_L"
+    default "Cygnus-M_L"
 
 config ZMK_SPLIT
     default y
