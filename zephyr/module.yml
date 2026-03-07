@@ -1,4 +1,4 @@
-name: KeyballBLE-M
+name: Cygnus-M
 build:
   settings:
     board_root: config
