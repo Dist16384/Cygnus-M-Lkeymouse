@@ -11,7 +11,11 @@
 
 &mt {
     flavor = "balanced";
-    quick-tap-ms = <0>;
+};
+
+&lt {
+    tapping-term-ms = <200>;
+    quick-tap-ms = <150>;
 };
 
 / {
@@ -34,6 +38,16 @@
     };
 
     behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <125>;
+            quick-tap-ms = <150>;
+            bindings = <&kp>, <&kp>;
+        };
+
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
@@ -59,7 +73,7 @@
         default_layer {
             bindings = <
 &lt 6 ESC  &kp Q     &kp W     &kp E          &kp R           &kp T                                           &kp Y        &kp U  &kp I      &kp O    &kp P        &kp BSPC
-&kp TAB    &lt 5 A   &lt 4 S   &kp D          &kp F           &kp G        &mkp MCLK          &kp UP_ARROW    &kp H        &kp J  &kp K      &lt 4 L  &lt 5 MINUS  &kp ENTER
+&kp TAB    &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &kp G  &mkp MCLK          &kp UP_ARROW    &kp H  &hm RSHFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMI  &kp ENTER
 &kp LSHFT  &kp Z     &kp X     &kp C          &kp V           &kp B        &kp DELETE         &kp DOWN_ARROW  &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH     &kp RSHFT
 &kp LCTRL  &kp LGUI  &kp LALT  &kp LC(SPACE)  &kp LEFT_ARROW  &lt 1 SPACE  &kp RIGHT_ARROW    &kp BACKSPACE   &lt 2 ENTER                             &kp DEL      &kp RCTRL
             >;
