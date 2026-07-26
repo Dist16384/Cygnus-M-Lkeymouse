@@ -15,12 +15,12 @@
 };
 
 &lt {
-    // Default lt is "tap-preferred": hold only engages after tapping-term, so a
-    // quick key press after the thumb layer key leaks the tap (SPACE) instead of
-    // switching layers. "balanced" engages the hold as soon as an interrupting
-    // key is pressed *and released* within the term -> layer switch fires first.
-    // If SPACE still leaks during very fast use, change to "hold-preferred".
-    flavor = "balanced";
+    // "hold-preferred": the hold (layer switch) engages the instant ANY other key
+    // is pressed while the thumb key is held -- it does not wait for that key to
+    // be released (as "balanced" does) nor for the tapping term (as the default
+    // "tap-preferred" does). This is the most reliable flavor for a thumb layer
+    // key that leaks SPACE.
+    flavor = "hold-preferred";
     quick-tap-ms = <0>;
 };
 
